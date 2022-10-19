@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Many Green Bottles";
+}
+
+<form asp-controller="Home" asp-action="Sing" method="post">
+    <table>
+        <tr>
+            <td>
+                Enter the number of bottles between 50 and 100: 
+                <input type="number" min="50" max="100" name="numBottles"/>
+            </td>
+            <td>
+                <button type="submit" value="Sing!" name="singButton"> Sing! </button>
+            </td>
+        </tr>
+    </table>
+    
+
+</form>

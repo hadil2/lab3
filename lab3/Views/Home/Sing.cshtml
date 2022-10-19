@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Singing...";
+
+    int numBottles =  Int32.Parse(Context.Session.GetString("numBottles"));
+
+    <form asp-action="SongForm">
+        <button type="submit" value="PlayAgain!" name="playButton"> PlayAgain! </button>
+    </form>
+    <br />
+    <br />
+    
+
+    for (int i = numBottles; i >= 1; i--)
+    {
+        <p class="lyrics">
+        @i green @((i == 1 || i == 0) ? "bottle" : "bottles") hanging on the wall, <br>
+        @i green bottles hanging on the wall, <br>
+        And if one green bottle should accidentally fall, <br>
+        There'll be @(i == 1 ? "no" : i-1) green @((i == 2 || i == 1) ? "bottle" : "bottles") hanging on the wall.
+        <br>
+        <br>
+        </p>
+
+
+    }
+
+    <p class="lyrics">There is no green bottle standing on the wall. <br /></p>
+}
+
+

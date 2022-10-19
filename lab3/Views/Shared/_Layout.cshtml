@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Welcome to Lab3</h1>
+        <p> Name: Hadil  Alshaikhsaleh</p> 
+         <p> student Number: 040981664</p>
+        <br />     
+        
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("Show the Song!", "SongForm", "Home") 
+        @Html.ActionLink("Persons", "CreatePerson", "Home") 
+
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+       
+        <ul>  Footer: 
+            <li>For the css file to be added, I basically made a css folder inside the wwwroot folder and added the StyleSheet.css file inside.r</li>
+            <li> just made a Shared folder inside the Views folder and inserted the _Layout.cshtml file inside to add the _Layout file.</li>
+            <li>In order to give our application a unified appearance and feel, we can specify a layout only once and reuse it as many times as necessary.</li>
+            <li>I keep the CSS file there because wwwroot is a folder where all static files (HTML, CSS, JS, and image files) that will be transmitted to the browser later are supposed to be kept.
+                Since this folder contains a variety of file formats, I designate a css folder to exclusively house css files for organisational purposes..
+            </li>
+            <li>Because a layout is only a component of a view, it belongs in the views folder, thus that is where I keep the _Layout.cshtml file. Additionally,
+                I created the Shared folder and placed my _Layout.cshtml there because several website pages can share the same layout.
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
